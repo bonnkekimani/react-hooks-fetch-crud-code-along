@@ -15,6 +15,20 @@ function ShoppingList() {
       .then((items) => setItems(items));
   }, []);
 
+  // add this callback function
+    function handleUpdateItem(updatedItem) {
+      // console.log("In ShoppingCart:", updatedItem);
+      const updatedItems = items.map((item) => {
+        if (item.id === updatedItem.id) {
+          return updatedItem;
+        } else {
+          return item;
+        }
+      });
+      setItems(updatedItems);
+
+    }
+
   // add this function!
     function handleAddItem(newItem) {
       // console.log("In ShoppingList:", newItem);
@@ -40,7 +54,7 @@ function ShoppingList() {
       />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
-          <Item key={item.id} item={item} />
+          <Item key={item.id} item={item} onUpdateItem={handleUpdateItem} />
         ))}
       </ul>
     </div>
