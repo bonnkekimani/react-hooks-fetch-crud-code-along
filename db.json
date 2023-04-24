@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Yogurt",
       "category": "Dairy",
-      "isInCart": true
+      "isInCart": false
     },
     {
       "id": 2,
@@ -39,7 +39,7 @@
     {
       "name": "ted",
       "category": "Dairy",
-      "isInCart": true,
+      "isInCart": false,
       "id": 7
     },
     {
@@ -52,25 +52,31 @@
       "name": "ted",
       "category": "Dairy",
       "isInCart": false,
-      "id": 9
-    },
-    {
-      "name": "ted",
-      "category": "Dairy",
-      "isInCart": true,
       "id": 10
     },
     {
       "name": "eve",
       "category": "Dairy",
-      "isInCart": true,
+      "isInCart": false,
       "id": 11
     },
     {
       "name": "top",
       "category": "Produce",
-      "isInCart": true,
+      "isInCart": false,
       "id": 12
+    },
+    {
+      "name": "Bonnke ",
+      "category": "Dessert",
+      "isInCart": false,
+      "id": 13
+    },
+    {
+      "name": "d",
+      "category": "Dairy",
+      "isInCart": false,
+      "id": 14
     }
   ]
 }

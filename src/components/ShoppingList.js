@@ -15,6 +15,12 @@ function ShoppingList() {
       .then((items) => setItems(items));
   }, []);
 
+  //add this callback function
+  function handleDeleteItem(deletedItem) {
+    const updatedItems = items.filter((item) => item.id !== deletedItem.id);
+    setItems(updatedItems);
+  }
+
   // add this callback function
     function handleUpdateItem(updatedItem) {
       // console.log("In ShoppingCart:", updatedItem);
@@ -53,8 +59,15 @@ function ShoppingList() {
         onCategoryChange={handleCategoryChange}
       />
       <ul className="Items">
+        
         {itemsToDisplay.map((item) => (
-          <Item key={item.id} item={item} onUpdateItem={handleUpdateItem} />
+          <Item 
+            key={item.id} 
+            item={item} 
+            onUpdateItem={handleUpdateItem} 
+            onDeleteItem={handleDeleteItem}
+            
+            />
         ))}
       </ul>
     </div>
